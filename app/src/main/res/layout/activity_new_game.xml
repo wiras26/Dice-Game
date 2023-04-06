@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECFFDC"
+    tools:context=".NewGameActivity">
+
+
+    <ImageView
+        android:id="@+id/dice1"
+        android:layout_width="138dp"
+        android:layout_height="138dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121"
+        tools:srcCompat="R.drawable.dice6" />
+
+    <ImageView
+        android:id="@+id/dice2"
+        android:layout_width="138dp"
+        android:layout_height="138dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121"
+        tools:srcCompat="R.drawable.dice6" />
+
+    <ImageView
+        android:id="@+id/dice3"
+        android:layout_width="138dp"
+        android:layout_height="137dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toTopOf="@+id/throwBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice1"
+        app:layout_constraintVertical_bias="0.843"
+        tools:srcCompat="R.drawable.dice6" />
+
+    <ImageView
+        android:id="@+id/dice4"
+        android:layout_width="138dp"
+        android:layout_height="137dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toTopOf="@+id/scoreBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toEndOf="@+id/dice3"
+        app:layout_constraintTop_toBottomOf="@+id/dice2"
+        app:layout_constraintVertical_bias="0.843"
+        tools:srcCompat="R.drawable.dice6" />
+
+    <ImageView
+        android:id="@+id/dice5"
+        android:layout_width="138dp"
+        android:layout_height="137dp"
+        app:layout_constraintBottom_toTopOf="@+id/dice4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice2"
+        app:layout_constraintVertical_bias="0.538"
+        tools:srcCompat="R.drawable.dice6" />
+
+    <Button
+        android:id="@+id/throwBtn"
+        android:layout_width="117dp"
+        android:layout_height="61dp"
+        android:text="THROW!"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scoreBtn"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice1"
+        app:layout_constraintVertical_bias="0.739" />
+
+    <Button
+        android:id="@+id/scoreBtn"
+        android:layout_width="117dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="40dp"
+        android:text="Score"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice1"
+        app:layout_constraintVertical_bias="0.739" />
+
+    <TextView
+        android:id="@+id/playerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="H:0/C:0"
+        android:textColor="#0BDA51"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/numPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dice1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toEndOf="@+id/playerScore"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.355" />
+
+
+
+
+    <TextView
+        android:id="@+id/gameMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New game started"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice5"
+        app:layout_constraintVertical_bias="0.824" />
+
+    <TextView
+        android:id="@+id/select1"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
+        android:text="Selected"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#07706A "
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/dice1"
+        app:layout_constraintEnd_toEndOf="@+id/dice1"
+        app:layout_constraintStart_toStartOf="@+id/dice1"
+        app:layout_constraintTop_toTopOf="@+id/dice1" />
+
+    <TextView
+        android:id="@+id/select2"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
+        android:text="Selected"
+        android:textColor="#07706A "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/dice2"
+        app:layout_constraintEnd_toEndOf="@+id/dice2"
+        app:layout_constraintStart_toStartOf="@+id/dice2"
+        app:layout_constraintTop_toTopOf="@+id/dice2" />
+
+    <TextView
+        android:id="@+id/select3"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
+        android:text="Selected"
+        android:textColor="#07706A "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/dice3"
+        app:layout_constraintEnd_toEndOf="@+id/dice3"
+        app:layout_constraintStart_toStartOf="@+id/dice3"
+        app:layout_constraintTop_toTopOf="@+id/dice3" />
+
+    <TextView
+        android:id="@+id/select4"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
+        android:text="Selected"
+        android:textColor="#07706A "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/dice4"
+        app:layout_constraintEnd_toEndOf="@+id/dice4"
+        app:layout_constraintStart_toStartOf="@+id/dice4"
+        app:layout_constraintTop_toTopOf="@+id/dice4" />
+
+    <TextView
+        android:id="@+id/select5"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
+        android:text="Selected"
+        android:textColor="#07706A "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/dice5"
+        app:layout_constraintEnd_toEndOf="@+id/dice5"
+        app:layout_constraintStart_toStartOf="@+id/dice5"
+        app:layout_constraintTop_toTopOf="@+id/dice5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
